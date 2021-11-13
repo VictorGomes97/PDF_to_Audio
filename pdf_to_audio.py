@@ -6,11 +6,11 @@ import io
 import pyttsx3
 
 file = open("F:\Downloads\Ata da Audiência.pdf", 'rb')  # Diretório do arquivo pdf para conversão em áudio
-rsrcmgr = PDFResourceManager()
-retstr = io.StringIO()
+rscmgr = PDFResourceManager()
+restr = io.StringIO()
 codec = 'utf-8'
 laparams = LAParams()
-device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
+device = TextConverter(rscmgr, restr, codec=codec, laparams=laparams)
 interpreter = PDFPageInterpreter(rsrcmgr, device)
 pages = PDFPage.get_pages(file)
 for page in pages:
